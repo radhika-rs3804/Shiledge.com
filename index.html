@@ -1,53 +1,64 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shiledge.com - Ebooks Store</title>
+    <title>Shiledge.com - Elegant Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to Shiledge.com</h1>
-        <p>Your trusted ebook store</p>
+        <h1>Shiledge.com</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Browse Ebooks</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Browse Ebooks</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section class="intro">
-            <h2>Discover, Read & Grow</h2>
-            <p>Find a wide range of ebooks for learning, personal development, and more.</p>
-            <button>Explore Now</button>
-        </section>
-        <section class="featured">
-            <h2>Featured Ebooks</h2>
-            <div class="ebook-list">
-                <div class="ebook-item">
-                    <h3>Learn Web Development</h3>
-                    <p>A beginner’s guide to building websites.</p>
-                    <button>Download</button>
-                </div>
-                <div class="ebook-item">
-                    <h3>Master Stock Market</h3>
-                    <p>Start trading and investing like a pro.</p>
-                    <button>Download</button>
-                </div>
-                <div class="ebook-item">
-                    <h3>Build Your Business</h3>
-                    <p>Steps to becoming a successful entrepreneur.</p>
-                    <button>Download</button>
-                </div>
-            </div>
-        </section>
-    </main>
+
+    <section class="hero">
+        <h2>Discover, Read & Grow</h2>
+        <p>Your trusted ebook store for learning and personal growth</p>
+        <button onclick="showPopup('popup1')">Explore Featured Ebook</button>
+    </section>
+
+    <section class="featured">
+        <div class="card" onclick="showPopup('popup2')">
+            <h3>Master Web Development</h3>
+        </div>
+        <div class="card" onclick="showPopup('popup3')">
+            <h3>Start Your Business</h3>
+        </div>
+    </section>
+
+    <div id="popup1" class="popup">
+        <div class="popup-content">
+            <span onclick="closePopup('popup1')" class="close">&times;</span>
+            <h2>Featured Ebook</h2>
+            <p>Learn everything about web design with elegance.</p>
+        </div>
+    </div>
+    <div id="popup2" class="popup">
+        <div class="popup-content">
+            <span onclick="closePopup('popup2')" class="close">&times;</span>
+            <h2>Master Web Development</h2>
+            <p>Step into the world of coding with expert guidance.</p>
+        </div>
+    </div>
+    <div id="popup3" class="popup">
+        <div class="popup-content">
+            <span onclick="closePopup('popup3')" class="close">&times;</span>
+            <h2>Start Your Business</h2>
+            <p>Learn how to build a business from scratch and grow it successfully.</p>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2025 Shiledge.com | All rights reserved.</p>
+        <p>© 2025 Shiledge.com | Follow us on social media</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
